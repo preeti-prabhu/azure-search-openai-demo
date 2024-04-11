@@ -50,7 +50,7 @@ def live_server_url(mock_env, mock_acs_search, free_port: int) -> Generator[str,
 
 def test_home(page: Page, live_server_url: str):
     page.goto(live_server_url)
-    expect(page).to_have_title("GPT + Enterprise data | Sample")
+    expect(page).to_have_title("Nautisense Enterprise")
 
 
 def test_chat(page: Page, live_server_url: str):
@@ -69,7 +69,7 @@ def test_chat(page: Page, live_server_url: str):
 
     # Check initial page state
     page.goto(live_server_url)
-    expect(page).to_have_title("GPT + Enterprise data | Sample")
+    expect(page).to_have_title("Nautisense Enterprise")
     expect(page.get_by_role("heading", name="Chat with your data")).to_be_visible()
     expect(page.get_by_role("button", name="Clear chat")).to_be_disabled()
     expect(page.get_by_role("button", name="Developer settings")).to_be_enabled()
@@ -131,7 +131,7 @@ def test_chat_customization(page: Page, live_server_url: str):
 
     # Check initial page state
     page.goto(live_server_url)
-    expect(page).to_have_title("GPT + Enterprise data | Sample")
+    expect(page).to_have_title("Nautisense Enterprise")
 
     # Customize all the settings
     page.get_by_role("button", name="Developer settings").click()
@@ -173,7 +173,7 @@ def test_chat_nonstreaming(page: Page, live_server_url: str):
 
     # Check initial page state
     page.goto(live_server_url)
-    expect(page).to_have_title("GPT + Enterprise data | Sample")
+    expect(page).to_have_title("Nautisense Enterprise")
     expect(page.get_by_role("button", name="Developer settings")).to_be_enabled()
     page.get_by_role("button", name="Developer settings").click()
     page.get_by_text("Stream chat completion responses").click()
@@ -206,7 +206,7 @@ def test_chat_followup_streaming(page: Page, live_server_url: str):
 
     # Check initial page state
     page.goto(live_server_url)
-    expect(page).to_have_title("GPT + Enterprise data | Sample")
+    expect(page).to_have_title("Nautisense Enterprise")
     expect(page.get_by_role("button", name="Developer settings")).to_be_enabled()
     page.get_by_role("button", name="Developer settings").click()
     page.get_by_text("Suggest follow-up questions").click()
@@ -243,7 +243,7 @@ def test_chat_followup_nonstreaming(page: Page, live_server_url: str):
 
     # Check initial page state
     page.goto(live_server_url)
-    expect(page).to_have_title("GPT + Enterprise data | Sample")
+    expect(page).to_have_title("Nautisense Enterprise")
     expect(page.get_by_role("button", name="Developer settings")).to_be_enabled()
     page.get_by_role("button", name="Developer settings").click()
     page.get_by_text("Stream chat completion responses").click()
@@ -282,7 +282,7 @@ def test_ask(page: Page, live_server_url: str):
 
     page.route("*/**/ask", handle)
     page.goto(live_server_url)
-    expect(page).to_have_title("GPT + Enterprise data | Sample")
+    expect(page).to_have_title("Nautisense Enterprise")
 
     page.get_by_role("link", name="Ask a question").click()
     page.get_by_placeholder("Example: Does my plan cover annual eye exams?").click()
@@ -320,7 +320,7 @@ def test_upload_hidden(page: Page, live_server_url: str):
 
     page.goto(live_server_url)
 
-    expect(page).to_have_title("GPT + Enterprise data | Sample")
+    expect(page).to_have_title("Nautisense Enterprise")
 
     expect(page.get_by_role("button", name="Clear chat")).to_be_visible()
     expect(page.get_by_role("button", name="Manage file uploads")).not_to_be_visible()
@@ -352,7 +352,7 @@ def test_upload_disabled(page: Page, live_server_url: str):
 
     page.goto(live_server_url)
 
-    expect(page).to_have_title("GPT + Enterprise data | Sample")
+    expect(page).to_have_title("Nautisense Enterprise")
 
     expect(page.get_by_role("button", name="Manage file uploads")).to_be_visible()
     expect(page.get_by_role("button", name="Manage file uploads")).to_be_disabled()
