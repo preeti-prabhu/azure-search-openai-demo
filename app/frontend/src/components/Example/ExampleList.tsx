@@ -3,9 +3,9 @@ import { Example } from "./Example";
 import styles from "./Example.module.css";
 
 const DEFAULT_EXAMPLES: string[] = [
-    "What is included in my Northwind Health Plus plan that is not in standard?",
-    "What happens in a performance review?",
-    "What does a Product Manager do?"
+    "What are the specific steps involved in an inspection service for the purifier?",
+    "What is the recommended frequency for inspection services?",
+    "What lubricating oil should be used for the spindle bearings?"
 ];
 
 const GPT4V_EXAMPLES: string[] = [
