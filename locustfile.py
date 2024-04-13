@@ -18,10 +18,10 @@ class ChatUser(HttpUser):
                     {
                         "content": random.choice(
                             [
-                                "What is included in my Northwind Health Plus plan that is not in standard?",
-                                "What does a Product Manager do?",
-                                "What happens in a performance review?",
-                                "Whats your whistleblower policy?",
+                                "What is the overhaul procedure for the Alfa Laval purifier?",
+                                "What are the specific steps involved in an inspection service for the purifier?",
+                                "What is the recommended frequency for inspection services?",
+                                "What lubricating oil should be used for the spindle bearings?",
                             ]
                         ),
                         "role": "user",

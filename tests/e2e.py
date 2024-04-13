@@ -75,8 +75,8 @@ def test_chat(page: Page, live_server_url: str):
     expect(page.get_by_role("button", name="Developer settings")).to_be_enabled()
 
     # Ask a question and wait for the message to appear
-    page.get_by_placeholder("Type a new question (e.g. does my plan cover annual eye exams?)").click()
-    page.get_by_placeholder("Type a new question (e.g. does my plan cover annual eye exams?)").fill(
+    page.get_by_placeholder("Type a new question (e.g. What are the specific steps involved in an overhaul service for the purifier?)").click()
+    page.get_by_placeholder("Type a new question (e.g. What are the specific steps involved in an overhaul service for the purifier?)").fill(
         "Whats the dental plan?"
     )
     page.get_by_role("button", name="Ask question button").click()
@@ -149,8 +149,8 @@ def test_chat_customization(page: Page, live_server_url: str):
     page.locator("button").filter(has_text="Close").click()
 
     # Ask a question and wait for the message to appear
-    page.get_by_placeholder("Type a new question (e.g. does my plan cover annual eye exams?)").click()
-    page.get_by_placeholder("Type a new question (e.g. does my plan cover annual eye exams?)").fill(
+    page.get_by_placeholder("Type a new question (e.g. What are the specific steps involved in an overhaul service for the purifier?)").click()
+    page.get_by_placeholder("Type a new question (e.g. What are the specific steps involved in an overhaul service for the purifier?)").fill(
         "Whats the dental plan?"
     )
     page.get_by_role("button", name="Ask question button").click()
@@ -180,8 +180,8 @@ def test_chat_nonstreaming(page: Page, live_server_url: str):
     page.locator("button").filter(has_text="Close").click()
 
     # Ask a question and wait for the message to appear
-    page.get_by_placeholder("Type a new question (e.g. does my plan cover annual eye exams?)").click()
-    page.get_by_placeholder("Type a new question (e.g. does my plan cover annual eye exams?)").fill(
+    page.get_by_placeholder("Type a new question (e.g. What are the specific steps involved in an overhaul service for the purifier?)").click()
+    page.get_by_placeholder("Type a new question (e.g. What are the specific steps involved in an overhaul service for the purifier?)").fill(
         "Whats the dental plan?"
     )
     page.get_by_label("Ask question button").click()
@@ -213,8 +213,8 @@ def test_chat_followup_streaming(page: Page, live_server_url: str):
     page.locator("button").filter(has_text="Close").click()
 
     # Ask a question and wait for the message to appear
-    page.get_by_placeholder("Type a new question (e.g. does my plan cover annual eye exams?)").click()
-    page.get_by_placeholder("Type a new question (e.g. does my plan cover annual eye exams?)").fill(
+    page.get_by_placeholder("Type a new question (e.g. What are the specific steps involved in an overhaul service for the purifier?)").click()
+    page.get_by_placeholder("Type a new question (e.g. What are the specific steps involved in an overhaul service for the purifier?)").fill(
         "Whats the dental plan?"
     )
     page.get_by_label("Ask question button").click()
@@ -251,8 +251,8 @@ def test_chat_followup_nonstreaming(page: Page, live_server_url: str):
     page.locator("button").filter(has_text="Close").click()
 
     # Ask a question and wait for the message to appear
-    page.get_by_placeholder("Type a new question (e.g. does my plan cover annual eye exams?)").click()
-    page.get_by_placeholder("Type a new question (e.g. does my plan cover annual eye exams?)").fill(
+    page.get_by_placeholder("Type a new question (e.g. What are the specific steps involved in an overhaul service for the purifier?)").click()
+    page.get_by_placeholder("Type a new question (e.g. What are the specific steps involved in an overhaul service for the purifier?)").fill(
         "Whats the dental plan?"
     )
     page.get_by_label("Ask question button").click()
